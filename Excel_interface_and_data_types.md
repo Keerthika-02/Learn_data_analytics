@@ -77,7 +77,7 @@ A cell is the intersection of a row and a column.
 - Formulas always start with an equals sign (`=`)
 
 - Example:
-- SUM(A1:A2)
+- =SUM(A1:A2)
 
 ---
 
@@ -122,17 +122,137 @@ Common tabs include:
 - Sheets can be added, renamed, or reordered
 
 ---
+# Data Types in Excel
 
-## Why Excel Interface Knowledge Matters
-- Helps navigate data efficiently
-- Reduces errors while entering data
-- Improves speed while analyzing large datasets
-- Forms the foundation for advanced Excel features
+This document explains the different data types supported by Microsoft Excel.
+Understanding data types is essential for accurate calculations, sorting, filtering,
+and data analysis.
 
 ---
 
-## Next Topics
-- Data types in Excel
-- Basic Excel formulas
-- Sorting and filtering
-- Data cleaning techniques
+## Text (String)
+Text data is used for names, labels, and descriptions.
+
+- Excel does not perform calculations on text values
+- Text is left-aligned by default
+
+Examples:
+- Name
+- Product A
+- India
+
+---
+
+## Number
+Number data is used for calculations.
+
+- Includes whole numbers, decimals, and negative values
+- Right-aligned by default
+
+Examples:
+- 100
+- 45.75
+- -20
+
+---
+
+## Date
+Dates are stored internally as serial numbers in Excel.
+
+- Each date represents the number of days since 1 January 1900
+- Used in time-based analysis and calculations
+
+Examples:
+- 01-01-2025
+- 15/08/2024
+
+---
+
+## Time
+Time values are stored as a fraction of a day.
+
+- Used to calculate durations and time differences
+
+Examples:
+- 10:30 AM
+- 18:45
+
+---
+
+## Date and Time
+A combination of both date and time values.
+
+- Stored as a single numeric value
+- Useful for timestamp-based analysis
+
+Example:
+- 15-01-2025 10:30 AM
+
+---
+
+## Currency
+Currency values represent monetary data.
+
+- Includes currency symbols such as ₹, $, €, £
+- Treated as numbers for calculations
+
+Examples:
+- ₹15,000
+- $500
+
+---
+
+## Percentage
+Percentage values are stored as decimals but displayed as percentages.
+
+- 0.25 is displayed as 25%
+
+Examples:
+- 85%
+- 40%
+
+---
+
+## Boolean (Logical)
+Logical values are used in conditional operations.
+
+- Possible values:
+  - TRUE
+  - FALSE
+- Commonly used in IF and logical formulas
+
+---
+
+## Formula
+A formula performs calculations or logical operations.
+
+- Always starts with an equals sign (`=`)
+- Can reference cells, ranges, and functions
+
+Examples:
+- =SUM(A1:A10) =A1*B1 =IF(A1>50,"Pass","Fail")
+
+---
+
+## Error Values
+Excel displays error values when formulas cannot be evaluated correctly.
+
+Common error types:
+- `#DIV/0!` – Division by zero
+- `#VALUE!` – Incorrect data type
+- `#REF!` – Invalid cell reference
+- `#NAME?` – Invalid function or name
+- `#N/A` – Value not available
+
+---
+
+## How to Check or Change Data Type
+1. Select the required cell or range
+2. Go to **Home → Number Group**
+3. Choose the appropriate format:
+   - General
+   - Number
+   - Text
+   - Date
+   - Currency
+   - Percentage
