@@ -1,93 +1,149 @@
 
+## 1. Basic Math & Calculation Functions
 
-## 1. Math & Statistics
+### SUM  
+Adds up a group of numbers.  
+**Syntax**: `=SUM(number1, number2, ...)  or  =SUM(A1:A10)`  
+**Example**: `=SUM(B2:B10)` → adds all values from B2 to B10  
+**Useful for**: Total sales, total expenses, total marks, etc.
 
-| Function                  | Description / Example                                      | Example Result          |
-|---------------------------|------------------------------------------------------------|--------------------------|
-| `=SUM(A1:A10)`            | Sum of range                                               | Total                   |
-| `=AVERAGE(A1:A10)`        | Average of range                                           | Mean                    |
-| `=MIN(A1:A10)`            | Smallest value                                             |                         |
-| `=MAX(A1:A10)`            | Largest value                                              |                         |
-| `=ROUND(number, digits)`  | Rounds to specified digits<br>`=ROUND(3.5678, 2)`          | 3.57                    |
-| `=ROUNDUP()` / `=ROUNDDOWN()` | Rounds up / down                                       |                         |
-| `=SUMPRODUCT(array1, array2, ...)` | Multiplies & sums arrays<br>Weighted average, etc. |                         |
-| `=SUMIFS(sum_range, criteria_range1, criteria1, ...)` | Sum with multiple conditions |                         |
-| `=COUNTIFS(criteria_range1, criteria1, ...)` | Count with multiple conditions |                         |
-| `=AVERAGEIFS()`           | Average with multiple conditions                           |                         |
+### AVERAGE  
+Finds the average (mean) of numbers.  
+**Syntax**: `=AVERAGE(range)`  
+**Example**: `=AVERAGE(C2:C20)` → average score of 19 students  
+**Useful for**: Average salary, average marks, average monthly sales.
 
-## 2. Logical Functions
+### MIN / MAX  
+Finds the smallest or largest value in a range.  
+**Syntax**: `=MIN(range)`  or  `=MAX(range)`  
+**Example**: `=MAX(D2:D100)` → highest salary in the list  
+**Useful for**: Finding top scorer, lowest price, maximum temperature.
 
-| Function                  | Description / Example                                      | Example Result          |
-|---------------------------|------------------------------------------------------------|--------------------------|
-| `=IF(A1>=60, "Pass", "Fail")` | Simple condition                                       | Pass / Fail             |
-| `=IFS(logical_test1, value_if_true1, ...)` | Multiple conditions (like switch) |                         |
-| `=AND(condition1, condition2)` | All conditions true → TRUE                           |                         |
-| `=OR(condition1, condition2)`  | Any condition true → TRUE                            |                         |
-| `=NOT(condition)`         | Reverses TRUE/FALSE                                        |                         |
-| `=IFERROR(value, value_if_error)` | Returns custom value on error<br>`=IFERROR(A1/B1, "Error")` |                         |
-| `=IFNA(value, value_if_na)` | Handles only #N/A errors                                 |                         |
+### ROUND / ROUNDUP / ROUNDDOWN  
+Controls how many decimal places a number shows.  
+**Syntax**: `=ROUND(number, num_digits)`  
+**Example**: `=ROUND(123.45678, 2)` → 123.46  
+**ROUNDUP** always rounds up, **ROUNDDOWN** always rounds down.  
+**Useful for**: Money calculations, formatting reports.
 
-## 3. Lookup & Reference (Modern Excel)
+## 2. Logical Functions (Making Decisions)
 
-| Function                  | Description / Example                                      | Notes                   |
-|---------------------------|------------------------------------------------------------|--------------------------|
-| `=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode])` | Modern, flexible lookup | Excel 365 / 2021+       |
-| `=INDEX(range, MATCH(lookup_value, lookup_range, 0))` | Classic powerful combo (any direction) | Still widely used       |
-| `=VLOOKUP(lookup_value, table_array, col_index, [range_lookup])` | Classic vertical lookup | Approximate match if FALSE → exact |
-| `=HLOOKUP()`              | Horizontal version of VLOOKUP                              |                         |
-| `=FILTER(array, include, [if_empty])` | Dynamic filter<br>`=FILTER(A2:C100, B2:B100>5000)` | Excel 365 / 2021+       |
-| `=SORT(range, [sort_index], [sort_order])` | Dynamic sort                                             | Excel 365 / 2021+       |
-| `=UNIQUE(range)`          | Returns only unique values                                 | Excel 365 / 2021+       |
+### IF  
+Checks a condition and returns one value if true, another if false.  
+**Syntax**: `=IF(condition, value_if_true, value_if_false)`  
+**Example**: `=IF(A2>=60, "Pass", "Fail")`  
+→ If marks ≥ 60 → "Pass", otherwise "Fail"  
+**Useful for**: Grading students, categorizing sales (High/Low), bonus calculation.
 
-## 4. Text Functions
+### AND / OR  
+Helps combine multiple conditions.  
+**Syntax**: `=AND(condition1, condition2, ...)`  
+**Example**: `=IF(AND(A2>=80, B2="Yes"), "Excellent", "Normal")`  
+→ Only if marks ≥ 80 **and** attendance is "Yes" → "Excellent"  
+**OR** returns TRUE if any condition is true.
 
-| Function                  | Description / Example                                      | Example Result          |
-|---------------------------|------------------------------------------------------------|--------------------------|
-| `=CONCAT(A1," ",B1)` or `=A1&" "&B1` | Join text                                      | John Doe                |
-| `=TEXTJOIN(delimiter, ignore_empty, text1, ...)` | Join with delimiter, skip blanks | "Apple, Banana, Cherry" |
-| `=LEFT(text, num_chars)`  | First characters<br>`=LEFT("Excel",3)`                     | Exc                     |
-| `=RIGHT(text, num_chars)` | Last characters                                            |                         |
-| `=MID(text, start, num_chars)` | Middle characters                                    |                         |
-| `=TRIM(text)`             | Remove extra spaces                                        | "Hello World"           |
-| `=SUBSTITUTE(text, old_text, new_text)` | Replace text                                   |                         |
-| `=UPPER()` / `=LOWER()` / `=PROPER()` | Case conversion                                  |                         |
-| `=TEXT(value, format_text)` | Format numbers/dates as text<br>`=TEXT(A1,"₹#,##0.00")` | ₹1,234.56               |
+### IFS  
+Like multiple IFs in one function (cleaner).  
+**Syntax**: `=IFS(condition1, value1, condition2, value2, ..., TRUE, default)`  
+**Example**: `=IFS(A2>=90,"A+", A2>=80,"A", A2>=70,"B", TRUE,"C")`
+
+### IFERROR  
+Hides error messages (like #DIV/0!) and shows something nice instead.  
+**Syntax**: `=IFERROR(value, value_if_error)`  
+**Example**: `=IFERROR(A1/B1, "Cannot divide by zero")`
+
+## 3. Text Functions (Working with Words)
+
+### CONCAT / & (Join Text)  
+Joins pieces of text together.  
+**Syntax**: `=CONCAT(A1, " ", B1)`  or  `=A1 & " " & B1`  
+**Example**: `=A2 & " " & B2` → "Keerthika Selvam"
+
+### TEXTJOIN  
+Joins text with a separator and can ignore empty cells.  
+**Syntax**: `=TEXTJOIN(", ", TRUE, A2:A10)`  
+**Example**: Joins names with commas → "Apple, Banana, Cherry"
+
+### LEFT / RIGHT / MID  
+Extracts part of the text.  
+**Syntax**: `=LEFT(text, number_of_characters)`  
+**Example**: `=LEFT("Hello World", 5)` → "Hello"  
+`=RIGHT("2025-12-31", 4)` → "2031"  
+`=MID("Excel is fun", 7, 3)` → "is "
+
+### TRIM  
+Removes extra spaces from text.  
+**Example**: `=TRIM("   Hello   World   ")` → "Hello World"
+
+### UPPER / LOWER / PROPER  
+Changes text case.  
+**PROPER** makes first letter of each word capital → "Hello World"
+
+## 4. Lookup Functions (Finding Information)
+
+### XLOOKUP (Modern & Best – Excel 365/2021+)  
+The best way to look up values today.  
+**Syntax**: `=XLOOKUP(what_to_find, where_to_look, what_to_return, [if_not_found])`  
+**Example**: `=XLOOKUP("Apple", A2:A100, B2:B100, "Not found")`  
+→ Finds price of "Apple"
+
+### VLOOKUP (Classic – Still widely used)  
+Looks up vertically in a table.  
+**Syntax**: `=VLOOKUP(what_to_find, table, column_number, FALSE)`  
+**Example**: `=VLOOKUP("P001", A2:D100, 3, FALSE)` → gets price from 3rd column
+
+### INDEX + MATCH (Most Powerful Combo)  
+More flexible than VLOOKUP.  
+**Syntax**: `=INDEX(return_range, MATCH(what_to_find, lookup_range, 0))`  
+**Example**: `=INDEX(B2:B100, MATCH("Apple", A2:A100, 0))`
 
 ## 5. Date & Time Functions
 
-| Function                  | Description / Example                                      | Example Result          |
-|---------------------------|------------------------------------------------------------|--------------------------|
-| `=TODAY()`                | Current date                                               | 21-Jan-2026             |
-| `=NOW()`                  | Current date & time                                        | 21-Jan-2026 17:45       |
-| `=DAY(date)` / `=MONTH()` / `=YEAR()` | Extract parts of date                              | 21 / 1 / 2026           |
-| `=EOMONTH(start_date, months)` | Last day of month<br>`=EOMONTH(TODAY(),0)`         | 31-Jan-2026             |
-| `=DATEDIF(start_date, end_date, "unit")` | Difference (Y=years, M=months, D=days)            |                         |
-| `=NETWORKDAYS(start, end, [holidays])` | Working days (excl. weekends)                        |                         |
-| `=WORKDAY(start_date, days, [holidays])` | Date after X working days                            |                         |
+### TODAY / NOW  
+Shows current date or date+time.  
+**Example**: `=TODAY()` → 21-Jan-2026  
+`=NOW()` → 21-Jan-2026 17:45
 
-## 6. Dynamic Array Functions (Excel 365 / 2021+)
+### DAY / MONTH / YEAR  
+Extracts day, month, or year from a date.  
+**Example**: `=YEAR(TODAY())` → 2026
 
-| Function                  | Description                                                | Example Result          |
-|---------------------------|------------------------------------------------------------|--------------------------|
-| `=FILTER(array, include)` | Filters rows that meet condition                           | Spill range             |
-| `=SORT(array)`            | Sorts range dynamically                                    | Spill range             |
-| `=UNIQUE(range)`          | Returns unique values                                      | Spill range             |
-| `=SEQUENCE(rows, [columns], [start], [step])` | Creates number sequence<br>`=SEQUENCE(10)` | 1 to 10                 |
-| `=RANDARRAY(rows, columns)` | Random numbers between 0–1                               | Spill range             |
+### EOMONTH  
+Gives the last day of the month.  
+**Example**: `=EOMONTH(TODAY(), 0)` → 31-Jan-2026
 
-## 7. Financial Functions (Common)
+### NETWORKDAYS  
+Counts working days between two dates (excludes weekends).  
+**Example**: `=NETWORKDAYS(A1, B1)` → number of working days
 
-| Function                  | Description                                                | Example                 |
-|---------------------------|------------------------------------------------------------|--------------------------|
-| `=PMT(rate, nper, pv)`    | Loan payment amount                                        | EMI calculation         |
-| `=FV(rate, nper, pmt, [pv])` | Future value                                           |                         |
-| `=PV(rate, nper, pmt)`    | Present value                                              |                         |
-| `=NPER(rate, pmt, pv)`    | Number of periods                                          |                         |
+## 6. Modern Dynamic Array Functions (Excel 365 / 2021+)
 
-## Quick Tips & Shortcuts
+### FILTER  
+Shows only rows that meet a condition.  
+**Example**: `=FILTER(A2:C100, B2:B100>5000)` → all sales > 5000
 
-- **Absolute reference**: `$A$1` (F4 key to toggle)
-- **AutoSum**: `Alt + =`
-- **Paste values only**: `Ctrl + Alt + V` → `V`
-- **Name a range**: Formulas → Name Manager
-- **Array formula (legacy)**: `Ctrl + Shift + Enter` (not needed in dynamic arrays)
+### UNIQUE  
+Gives only unique values (no duplicates).  
+**Example**: `=UNIQUE(A2:A100)` → list of unique customer names
+
+### SORT  
+Automatically sorts a range.  
+**Example**: `=SORT(B2:B100)` → sorted list
+
+## 7. Counting Functions
+
+### COUNT / COUNTA / COUNTBLANK  
+- `COUNT` → counts numbers only  
+- `COUNTA` → counts all non-empty cells  
+- `COUNTBLANK` → counts empty cells
+
+### COUNTIF / COUNTIFS  
+Counts cells that match a condition (or multiple conditions).  
+**Example**: `=COUNTIF(A2:A100, "Apple")` → how many times "Apple" appears
+
+## Quick Learning Tips
+
+- Press **F4** while writing a formula → adds $ signs (locks cell reference)  
+- **Alt + =** → AutoSum instantly  
+- Use **Ctrl + Shift + Enter** only for old-style array formulas (not needed in modern Excel)  
+- Start practicing with small data first!
