@@ -3,10 +3,10 @@
 ## 🟢 Week 1: Foundations & Speed (The Basics)
 *Goal: Master the interface and learn to handle data without a mouse.*
 
-- [ ] **Day 01:** Interface & Navigation (Ribbon, Quick Access Toolbar, Name Box).
+- [x] **Day 01:** Interface & Navigation (Ribbon, Quick Access Toolbar, Name Box).
 - [ ] **Day 02:** Data Entry & Selection Shortcuts (`Ctrl` + `Arrows`, `Shift`, `Space`).
-- [ ] **Day 03:** Basic Math Operations (`+`, `-`, `*`, `/`) and AutoSum.
-- [ ] **Day 04:** Relative vs. Absolute Cell Referencing (The `$` sign - `$A$1`).
+- [x] **Day 03:** Basic Math Operations (`+`, `-`, `*`, `/`) and AutoSum.
+- [x] **Day 04:** Relative vs. Absolute Cell Referencing (The `$` sign - `$A$1`).
 - [ ] **Day 05:** Formatting: Cell styles, Number formats (Date vs. Currency vs. General).
 - [ ] **Day 06:** **Excel Tables (`Ctrl` + `T`):** Learn why this is better than "Ranges."
 - [ ] **Day 07:** Review & Mini-Project: Create a personal monthly budget tracker.
