@@ -7,9 +7,9 @@
 - [ ] **Day 02:** Data Entry & Selection Shortcuts (`Ctrl` + `Arrows`, `Shift`, `Space`).
 - [x] **Day 03:** Basic Math Operations (`+`, `-`, `*`, `/`) and AutoSum.
 - [x] **Day 04:** Relative vs. Absolute Cell Referencing (The `$` sign - `$A$1`).
-- [ ] **Day 05:** Formatting: Cell styles, Number formats (Date vs. Currency vs. General).
-- [ ] **Day 06:** **Excel Tables (`Ctrl` + `T`):** Learn why this is better than "Ranges."
-- [ ] **Day 07:** Review & Mini-Project: Create a personal monthly budget tracker.
+- [x] **Day 05:** Formatting: Cell styles, Number formats (Date vs. Currency vs. General).
+- [x] **Day 06:** **Excel Tables (`Ctrl` + `T`):** Learn why this is better than "Ranges."
+- [x] **Day 07:** Review & Mini-Project: Create a personal monthly budget tracker.
 
 ---
 
