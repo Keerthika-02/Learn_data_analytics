@@ -16,9 +16,9 @@
 ## 🟡 Week 2: Data Cleaning & Logic (The "Analyst" Core)
 *Goal: Learn to fix "dirty" data and create logical categories.*
 
-- [ ] **Day 08:** Text Functions: `LEFT`, `RIGHT`, `MID`, `LEN`, `FIND`.
-- [ ] **Day 09:** Cleaning Tools: `TRIM`, `CLEAN`, `PROPER`, and Remove Duplicates.
-- [ ] **Day 10:** Flash Fill (`Ctrl` + `E`) and Text-to-Columns.
+- [x] **Day 08:** Text Functions: `LEFT`, `RIGHT`, `MID`, `LEN`, `FIND`.
+- [x] **Day 09:** Cleaning Tools: `TRIM`, `CLEAN`, `PROPER`, and Remove Duplicates.
+- [x] **Day 10:** Flash Fill (`Ctrl` + `E`) and Text-to-Columns.
 - [ ] **Day 11:** Logical Functions: `IF`, `AND`, `OR`, and `NOT`.
 - [ ] **Day 12:** Advanced Logic: Nested `IF` and the newer `IFS` function.
 - [ ] **Day 13:** Date & Time Functions: `TODAY`, `NETWORKDAYS`, `EOMONTH`.
