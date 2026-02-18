@@ -4,7 +4,7 @@
 *Goal: Master the interface and learn to handle data without a mouse.*
 
 - [x] **Day 01:** Interface & Navigation (Ribbon, Quick Access Toolbar, Name Box).
-- [ ] **Day 02:** Data Entry & Selection Shortcuts (`Ctrl` + `Arrows`, `Shift`, `Space`).
+- [x] **Day 02:** Data Entry & Selection Shortcuts (`Ctrl` + `Arrows`, `Shift`, `Space`).
 - [x] **Day 03:** Basic Math Operations (`+`, `-`, `*`, `/`) and AutoSum.
 - [x] **Day 04:** Relative vs. Absolute Cell Referencing (The `$` sign - `$A$1`).
 - [x] **Day 05:** Formatting: Cell styles, Number formats (Date vs. Currency vs. General).
@@ -19,8 +19,8 @@
 - [x] **Day 08:** Text Functions: `LEFT`, `RIGHT`, `MID`, `LEN`, `FIND`.
 - [x] **Day 09:** Cleaning Tools: `TRIM`, `CLEAN`, `PROPER`, and Remove Duplicates.
 - [x] **Day 10:** Flash Fill (`Ctrl` + `E`) and Text-to-Columns.
-- [ ] **Day 11:** Logical Functions: `IF`, `AND`, `OR`, and `NOT`.
-- [ ] **Day 12:** Advanced Logic: Nested `IF` and the newer `IFS` function.
+- [x] **Day 11:** Logical Functions: `IF`, `AND`, `OR`, and `NOT`.
+- [x] **Day 12:** Advanced Logic: Nested `IF` and the newer `IFS` function.
 - [ ] **Day 13:** Date & Time Functions: `TODAY`, `NETWORKDAYS`, `EOMONTH`.
 - [ ] **Day 14:** Review & Practice: Clean a messy "Customer Contact List" dataset.
 
